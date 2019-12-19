@@ -1,0 +1,60 @@
+---
+title: "Use of mathUtil function"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Package_example}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+### get_build_res_path()
+
+Let's create a working directory of our project
+```{r, echo = F}
+project_repository <- c(
+  "project/data/data.csv", 
+  "project/R/00_setup.R", 
+  "project/R/01_data_prep.R", 
+  "project/R/02_analysis.R"
+)
+
+```
+```{r, echo = F}
+library(data.tree)
+library(plyr)
+
+x <- lapply(strsplit(project_repository, "/"), function(z) as.data.frame(t(z)))
+x <- rbind.fill(x)
+x$pathString <- apply(x, 1, function(x) paste(trimws(na.omit(x)), collapse="/"))
+(mytree <- data.tree::as.Node(x))
+
+```
+
+For a tidier project repository, we want to put our results in a folder "res" in the root of
+"project_repository" but with all the sub folder that conserve the association with the R script.
+
+Example : the script "project/R/02_analysis.R" have figures in output we want to store those figures
+          in the folder "project/res/02_analysis"
+          
+To do so, the function allows to create the mirror repository of a script in res folder.
+
+![](C:/Users/mgenu.RATUFA/Documents/Projet/scriptR/example_get_build_res_path/example_function_get_build_res_path.png)
+
+This allows to create the repository associated with the script and put the plot in it.
+
+
+```{r, echo = F}
+project_repository_final <- c("project/data/data.csv", "project/R/00_setup.R", "project/R/01_data_prep.R", "project/R/02_analysis.R", "project/res/02_analysis/plot.png")
+
+```
+
+```{r, echo = F}
+library(data.tree)
+library(plyr)
+
+x <- lapply(strsplit(project_repository_final, "/"), function(z) as.data.frame(t(z)))
+x <- rbind.fill(x)
+x$pathString <- apply(x, 1, function(x) paste(trimws(na.omit(x)), collapse="/"))
+(mytree <- data.tree::as.Node(x))
+
+```
