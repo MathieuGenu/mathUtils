@@ -15,3 +15,8 @@ LazyData: true
 Imports: 
     stringr,
     rstudioapi
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 7.0.0
