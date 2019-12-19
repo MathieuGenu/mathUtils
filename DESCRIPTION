@@ -1,0 +1,17 @@
+Package: mathUtil
+Title: Utils functions
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "First",
+           family = "Last",
+           role = c("aut", "cre"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Author: Mathieu Genu [aut, cre], Matthieu Authier [aut, cre]
+Description: Function that are usefull in our analysis
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    stringr,
+    rstudioapi
