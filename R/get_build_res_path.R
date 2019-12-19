@@ -12,7 +12,7 @@ get_build_res_path <- function(r_script_path) {
   # res path to create
   res_path <- gsub(pattern = "R/", replacement = "res/", path_w_root)
 
-  # check if repersitory already exist
+  # check if repository already exist
   if (!file.exists(res_path)) {
     dir.create(res_path, showWarnings = F, recursive = T)
   }
