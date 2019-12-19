@@ -21,6 +21,8 @@ get_build_res_path <- function() {
   # delete root and .R extension
   path_w_root <- stringr::str_extract(pattern = "/R/(.*)",string = script_path)
   path_w_root <- stringr::str_extract(pattern = "^.*(?=(.R))",string = path_w_root)
+  path_w_root <- stringr::str_extract(pattern = "R/(.*)",string = path_w_root)
+
 
   # res path to create
   res_path <- gsub(pattern = "R/", replacement = "res/", path_w_root)
