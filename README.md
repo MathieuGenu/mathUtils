@@ -1,7 +1,5 @@
 mathUtil
 ================
-Mathieu Genu
-20/12/2019
 
 mathUtils gather a bunch of useful function for package development,
 script, etc…
