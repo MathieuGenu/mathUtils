@@ -5,6 +5,15 @@ date: "20/12/2019"
 output: github_document
 ---
 
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse  = TRUE,
+  comment   = "#>",
+  fig.path  = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
 mathUtils gather a bunch of useful function for package development, script, etc...
 
 ## Installation
