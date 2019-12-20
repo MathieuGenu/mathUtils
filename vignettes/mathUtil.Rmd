@@ -16,6 +16,8 @@ vignette: >
 
 ## get_build_res_path()
 
+`r emo::ji("exclamation")` THIS FUNCTION CAN ONLY BE USED WITH RSTUDIO, IT HAS TO BE USED IN AN OPEN SCRIPT SAVED IN A REPOSITORY NAMED 'R/' `r emo::ji("exclamation")`
+
 Let's create a working directory of our project
 ```{r, echo = F}
 project_repository <- c(
