@@ -2,14 +2,19 @@
 title: "Use of mathUtil function"
 author: "Mathieu Genu"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
+output:
+  rmarkdown::html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
 vignette: >
   %\VignetteIndexEntry{All mathUtil function}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-### get_build_res_path()
+## get_build_res_path()
 
 Let's create a working directory of our project
 ```{r, echo = F}
@@ -60,3 +65,5 @@ x$pathString <- apply(x, 1, function(x) paste(trimws(na.omit(x)), collapse="/"))
 (mytree <- data.tree::as.Node(x))
 
 ```
+
+

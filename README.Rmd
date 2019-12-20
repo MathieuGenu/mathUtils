@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-mathUtils gather a bunch of useful function for package development, script, etc...
+mathUtil gather a bunch of useful function for package development, script, etc...
 
 ## Installation
 
