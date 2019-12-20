@@ -2,10 +2,8 @@
 #'
 #' @return 2 actions are made
 #'         \enumerate{
-#'           \item gives the path name of the res folder mirror of the path of the R script
+#'           \item gives the path name of the res folder mirror of a R script
 #'           \item create the res path corresponding of the R script
-#'           \item graph : Barplot of detections depending of distance, with confindence
-#'           estimated with mcmc chains.
 #'         }
 #' @examples
 #'
