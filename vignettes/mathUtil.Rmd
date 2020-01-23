@@ -1,4 +1,23 @@
 ---
+title: "mathUtil"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{mathUtil}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(mathUtil)
+```
+---
 title: "Use of mathUtil function"
 author: "Mathieu Genu"
 date: "`r Sys.Date()`"
@@ -26,17 +45,14 @@ project_repository <- c(
   "project/R/01_data_prep.R", 
   "project/R/02_analysis.R"
 )
-
 ```
 ```{r, echo = F}
 library(data.tree)
 library(plyr)
-
 x <- lapply(strsplit(project_repository, "/"), function(z) as.data.frame(t(z)))
 x <- rbind.fill(x)
 x$pathString <- apply(x, 1, function(x) paste(trimws(na.omit(x)), collapse="/"))
 (mytree <- data.tree::as.Node(x))
-
 ```
 
 For a tidier project repository, we want to put our results in a folder "res" in the root of
@@ -54,18 +70,13 @@ This allows to create the repository associated with the script and put the plot
 
 ```{r, echo = F}
 project_repository_final <- c("project/data/data.csv", "project/R/00_setup.R", "project/R/01_data_prep.R", "project/R/02_analysis.R", "project/res/02_analysis/plot.png")
-
 ```
 
 ```{r, echo = F}
 library(data.tree)
 library(plyr)
-
 x <- lapply(strsplit(project_repository_final, "/"), function(z) as.data.frame(t(z)))
 x <- rbind.fill(x)
 x$pathString <- apply(x, 1, function(x) paste(trimws(na.omit(x)), collapse="/"))
 (mytree <- data.tree::as.Node(x))
-
 ```
-
-
