@@ -1,23 +1,4 @@
 ---
-title: "mathUtil"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{mathUtil}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
-```{r setup}
-library(mathUtil)
-```
----
 title: "Use of mathUtil function"
 author: "Mathieu Genu"
 date: "`r Sys.Date()`"
