@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_build_res_path.R
 \name{get_build_res_path}
 \alias{get_build_res_path}
-\title{get and build result path}
+\title{Get and build result path.}
 \usage{
 get_build_res_path()
 }
@@ -14,9 +14,9 @@ get_build_res_path()
         }
 }
 \description{
-get and build result path
+Executing this function in an open script in Rstudio will create a mirror repository
+ in "res" folder to store results of the script.
 }
 \examples{
-
 
 }

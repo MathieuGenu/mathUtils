@@ -8,12 +8,19 @@ Authors@R:
            email = "first.last@example.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Author: Mathieu Genu [aut, cre], Matthieu Authier [aut, cre]
-Description: Function that are usefull in our analysis.
+Description: Usefull function in analysis, presentation, and else...
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.0.0
+RoxygenNote: 7.1.1
 Suggests: 
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Imports: 
+    stringr,
+    rstudioapi,
+    ggplot2,
+    dplyr,
+    magrittr,
+    scales

@@ -1,7 +1,7 @@
 ---
 title: "Use of mathUtil function"
 author: "Mathieu Genu"
-date: "`r Sys.Date()`"
+date: "2020/01/23"
 output:
   rmarkdown::html_document:
     toc: true
@@ -61,3 +61,8 @@ x <- rbind.fill(x)
 x$pathString <- apply(x, 1, function(x) paste(trimws(na.omit(x)), collapse="/"))
 (mytree <- data.tree::as.Node(x))
 ```
+
+## calendar.R
+
+This function allows to plot values depending on dates and visualized in a calendar. The code come from a  ![blog](https://vietle.info/post/calendarheatmap/) that explain how to create a calendar using ggplot.
+

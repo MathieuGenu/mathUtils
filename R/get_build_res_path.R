@@ -1,4 +1,7 @@
-#' get and build result path
+#' Get and build result path.
+#'
+#' Executing this function in an open script in Rstudio will create a mirror repository
+#'  in "res" folder to store results of the script.
 #'
 #' @return 2 actions are made
 #'         \enumerate{
@@ -7,7 +10,8 @@
 #'         }
 #' @examples
 #'
-#'
+#' @import stringr
+#' @importFrom rstudioapi getSourceEditorContext
 #' @export
 
 
